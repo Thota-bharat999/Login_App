@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const STORAGE_KEY = 'rememberedUsername';
-const API_URL = 'http://localhost:5000/login';
+const API_URL = 'https://login-app-r133.onrender.com/login';
 
 function LoginPage() {
     const navigate = useNavigate();
