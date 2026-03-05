@@ -9,9 +9,11 @@ const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin';
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5175',
+  // Reflect the request origin to avoid mismatches (helps local dev on different ports)
+  origin: true,
   methods: ['POST', 'GET'],
   allowedHeaders: ['Content-Type'],
+  credentials: true,
 }));
 app.use(express.json());
 
